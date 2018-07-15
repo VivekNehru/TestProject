@@ -10,7 +10,7 @@ public class LoginTests {
 	String title;
 	WebDriver driver;
 	@BeforeSuite
-	
+	/*Initializing the driver*/
 	public void initDriver() {
 		
 		System.setProperty("webdriver.chrome.driver", "H:\\Java\\chromedriver.exe");
