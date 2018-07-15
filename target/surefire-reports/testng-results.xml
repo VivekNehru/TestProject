@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2018-07-15T15:04:13Z" name="Suite" finished-at="2018-07-15T15:04:13Z" duration-ms="31">
+    <groups>
+    </groups>
+    <test started-at="2018-07-15T15:04:13Z" name="Test" finished-at="2018-07-15T15:04:13Z" duration-ms="31">
+      <class name="genericTestCases.LoginTests">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:genericTestCases.LoginTests@2898ac89]" started-at="2018-07-15T15:04:00Z" name="initDriver" finished-at="2018-07-15T15:04:13Z" duration-ms="13467" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="checkTitle()[pri:0, instance:genericTestCases.LoginTests@2898ac89]" started-at="2018-07-15T15:04:13Z" name="checkTitle" finished-at="2018-07-15T15:04:13Z" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTitle -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:genericTestCases.LoginTests@2898ac89]" started-at="2018-07-15T15:04:14Z" name="closeBrowser" finished-at="2018-07-15T15:04:14Z" duration-ms="305" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- genericTestCases.LoginTests -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
