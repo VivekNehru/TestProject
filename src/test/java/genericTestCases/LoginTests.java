@@ -1,25 +1,28 @@
 package genericTestCases;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import pageObjects.LoginPage;
+
 public class LoginTests {
 	String title;
 	WebDriver driver;
+	LoginPage login =new LoginPage();
+	String userdir=System.getProperty("user.dir");
+	
 	@BeforeSuite
 	/*Initializing the driver*/
-	public void initDriver() {
+	public void initMethod() {
 		
-		System.setProperty("webdriver.chrome.driver", "H:\\Java\\chromedriver.exe");
-		driver=new ChromeDriver();
+		driver=login.initDriver();
+		login.config(userdir+"/src/main/resources/Config.Properties");
 		driver.get("http://indiarailinfo.com");
-		driver.manage().window().maximize();
 	}
 	
-	@Test
+	@Test(priority=1)
 	public void checkTitle() {
 		String myTitle=driver.getTitle();
 		if(myTitle.equalsIgnoreCase("Indiarailinfo.com")) {
@@ -30,6 +33,15 @@ public class LoginTests {
 		}
 	}
 	
+	@Test (priority=0)
+	public void CheckLogin() {
+		login.Login("uid", "pwd");
+	}
+	
+	@Test (priority=2)
+	public void logout() {
+		login.logout();
+	}
 	@AfterSuite
 	
 	public void closeBrowser() {
